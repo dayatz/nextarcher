@@ -1,7 +1,7 @@
 'use client';
 
+import Button from "~/components/Button";
 import AuthService from "~/services/auth.service";
-import Button from "../Button";
 
 export default function LogoutButton() {
   return (

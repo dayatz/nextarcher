@@ -4,10 +4,10 @@ import { getServerSession } from 'next-auth'
 import { redirect } from 'next/navigation'
 import { Plus_Jakarta_Sans } from 'next/font/google'
 
-import Navbar from '~/components/Navbar'
 import Providers from '~/components/Providers'
+import Navbar from '../../components/Navbar/Navbar'
 
-const font = Plus_Jakarta_Sans({ subsets: ['latin'], weight: ['400', '700']})
+const font = Plus_Jakarta_Sans({ subsets: ['latin'], weight: ['400', '700'] })
 
 export const metadata = {
   title: 'Next Archer',
