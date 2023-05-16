@@ -1,13 +1,9 @@
-import { getServerSession } from "next-auth";
-import LogoutButton from "./LogoutButton";
 import AuthService from "~/services/auth.service";
+import { FiUser } from 'react-icons/fi'
 
 export default async function UserButton() {
   const u = await AuthService.getUser()
   return (
-    <div>
-      <span>{u.name}</span>
-      <LogoutButton />
-    </div>
+    <FiUser size={24} color="var(--color-primary)" />  
   )
 }

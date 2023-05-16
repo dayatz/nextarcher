@@ -1,12 +1,13 @@
 import '../globals.css'
 
 import { getServerSession } from 'next-auth'
-import { Inter } from 'next/font/google'
+import { redirect } from 'next/navigation'
+import { Plus_Jakarta_Sans } from 'next/font/google'
+
 import Navbar from '~/components/Navbar'
 import Providers from '~/components/Providers'
-import { redirect } from 'next/navigation'
 
-const inter = Inter({ subsets: ['latin'] })
+const font = Plus_Jakarta_Sans({ subsets: ['latin'], weight: ['400', '700']})
 
 export const metadata = {
   title: 'Next Archer',
@@ -23,9 +24,9 @@ export default async function RootLayout({
   }
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={font.className}>
         <Providers>
-          <div className='max-w-lg mx-auto h-full'>
+          <div className='max-w-lg mx-auto h-full px-6 pt-9 pb-20 overflow-auto'>
             {children}
           </div>
           <Navbar />

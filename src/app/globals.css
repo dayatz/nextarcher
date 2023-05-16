@@ -7,7 +7,9 @@ html, body {
 }
 
 :root {
-  --bg-color: hsl(0, 0%, 97%);
+  --bg-color: hsl(223, 64%, 98%);
+  --color-primary: 	hsl(175, 77%, 26%);
+  --color-primary-h: hsla(175, 77%, 26%, 0.8);
 }
 
 body {
