@@ -60,7 +60,7 @@ function getBgColorPercent(percentage: number) {
 
 export default function HomePage() {
   return (
-    <main>
+    <>
       <h1 className="text-2xl mb-6">Hasil Latihan</h1>
 
       <div className='space-y-6'>
@@ -74,7 +74,7 @@ export default function HomePage() {
               </div>
               <div className="px-4 flex w-full items-center justify-between text-xs border-b border-gray-300 py-2">
                 <p className='m-0'>{d.title}</p>
-                <p className='m-0'>{format(d.date, 'dd MMMM yyyy, HH:mm')}</p>
+                <p className='m-0 text-gray-500'>{format(d.date, 'dd MMMM yyyy, HH:mm')}</p>
               </div>
               <div className='flex gap-6 px-4'>
                 <div className='py-4 pl-2 flex flex-col items-center justify-center'>
@@ -109,6 +109,6 @@ export default function HomePage() {
           )
         })}
       </div>
-    </main>
+    </>
   )
 }

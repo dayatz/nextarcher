@@ -10,8 +10,8 @@ export const authOptions: AuthOptions = {
         password: { type: 'password'},
       },
       async authorize(creds) {
-        console.log('------------------')
-        console.log({ auth: creds })
+        console.log('------------------authorize()')
+        console.log({ creds })
 
         // get user
         if (creds?.phone.includes('err')) {
@@ -25,7 +25,16 @@ export const authOptions: AuthOptions = {
         return user
       }
     })
-  ]
+  ],
+  callbacks: {
+    signIn(params) {
+      console.log('---- sigIn() callback')
+      console.log({
+        params,
+      })
+      return true
+    }
+  }
 }
 
 const handler = NextAuth(authOptions)

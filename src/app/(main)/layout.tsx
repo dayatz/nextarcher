@@ -26,9 +26,9 @@ export default async function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <Providers>
-          <div className='max-w-lg mx-auto h-full px-6 pt-9 pb-20 overflow-auto'>
+          <main className='max-w-lg mx-auto h-full px-6 pt-9 pb-20 overflow-auto'>
             {children}
-          </div>
+          </main>
           <Navbar />
         </Providers>
       </body>
